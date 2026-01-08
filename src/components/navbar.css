@@ -48,3 +48,12 @@
     color: black;
     font-size: x-large;
 }
+
+.theme{
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    font-size: larger;
+}
