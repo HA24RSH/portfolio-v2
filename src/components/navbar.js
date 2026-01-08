@@ -24,7 +24,7 @@ export const Navbar = () => {
 
                 <div className='nv-content'>
                     <button className='theme'>
-                        <DarkModeIcon />
+                        <DarkModeIcon fontSize='small'/>
                     </button>
                 </div>
             </div>
