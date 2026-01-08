@@ -10,9 +10,7 @@ export const Navbar = () => {
                     <Link to='/' className='link-logo'>
                         <img src={logo} alt='logo' className='logo-img'/>
                     </Link>
-                </div>
 
-                <div className='nv-content'>
                     <div className='nv-details'>
                         <Link to='/work' className='nv-links'>
                             Work
@@ -21,6 +19,12 @@ export const Navbar = () => {
                             Projects
                         </Link>
                     </div>
+                </div>
+
+                <div className='nv-content'>
+                    <button className='theme'>
+                        
+                    </button>
                 </div>
             </div>
         </nav>
