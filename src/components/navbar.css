@@ -1,0 +1,38 @@
+.nv-container{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid red;
+}
+
+.nv-logo{
+
+}
+
+.link-logo{
+
+}
+
+.logo-img{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgb(0, 0, 0);
+    width: 5vw;
+    height: 100%;
+}
+
+.nv-content{
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.nv-details{
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    border: 2px solid red;
+}
+.nv-links{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
