@@ -3,16 +3,14 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    border: 2px solid blue;
 
 }
 
 .nv-container{
     display: flex;
     justify-content: space-between;
-    border: 2px solid red;
     align-items: flex-end;
-    width: 60%;
+    width: 100%;
 }
 
 .nv-logo{
@@ -26,7 +24,6 @@
     border-radius: 20px;
     width: 5vw;
     height: 100%;
-    border: 2px solid black;
 }
 
 .nv-content{
@@ -37,7 +34,6 @@
 .nv-details{
     display: flex;
     gap: 2vw;
-    border: 2px solid red;
 }
 .nv-links{
     display: flex;

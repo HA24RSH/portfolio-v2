@@ -1,0 +1,43 @@
+.hero-logo{
+    display: flex;
+    width: 9vw;
+    height: 17vh;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-logo{
+    display: flex;
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-text{
+    text-align: justify;
+    font-size: x-large;
+}
+
+.inside-text{
+    font-size: medium;
+}
+
+.hero-resume{
+    padding-bottom: 1rem;
+}
+
+.hs-link{
+    text-decoration: none;
+}
+
+.hero-socials{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.social-links{
+    text-decoration: none;
+    color: black;
+}
