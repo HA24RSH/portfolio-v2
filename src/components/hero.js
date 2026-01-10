@@ -13,7 +13,7 @@ export const Hero = () => {
             </div>
 
             <div className='hero-text'>
-                <h2>Hi, I'm Haarshh - A Full Stack Developer who turns caffeine
+                <h2>Hi, I'm Harsh — A Full Stack Developer who turns caffeine
                     into code.</h2>
                 <div className='inside-text'>
                     <h3>
@@ -38,19 +38,19 @@ export const Hero = () => {
 
             <div className='hero-socials'>
                 <a href='https://github.com/HA24RSH' className='social-links'>
-                    <GitHubIcon />
+                    <GitHubIcon fontSize='medium' />
                 </a>
 
                 <a href='https://www.linkedin.com/in/harshvardhan-gadagade/' className='social-links'>
-                    <LinkedInIcon />
+                    <LinkedInIcon fontSize='medium' />
                 </a>
 
                 <a href='https://x.com/haarshhqt' className='social-links'>
-                    <XIcon />
+                    <XIcon fontSize='medium' />
                 </a>
 
-                  <a href="mailto:harshvardhangadagade24@gmail.com" className='social-links'>
-                    <EmailIcon />
+                <a href="mailto:harshvardhangadagade24@gmail.com" className='social-links'>
+                    <EmailIcon fontSize='medium' />
                 </a>
             </div>
         </div>

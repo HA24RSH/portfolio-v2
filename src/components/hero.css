@@ -1,3 +1,8 @@
+.hero-container{
+    display: flex;
+    flex-direction: column;
+}
+
 .hero-logo {
     display: flex;
     width: 9vw;
@@ -25,6 +30,8 @@
 }
 
 .hero-resume {
+    display: flex;
+    gap: 0.5rem;
     padding-bottom: 1rem;
 }
 
@@ -34,7 +41,7 @@
     gap: 0.5rem;
 }
 
-.hs-link {
+.hs-links {
     text-decoration: none;
 }
 
@@ -64,13 +71,18 @@
         font-size: small;
     }
 
+    .inside-text{
+        font-size: x-small;
+    }
+
     .hs-links {
         text-decoration: none;
-        display: inline-block;
+        font-size: x-small;
     }
 
     .hs-button {
         text-decoration: none;
+        font-size: small;
         background: transparent;
     }
 

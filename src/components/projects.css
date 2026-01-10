@@ -1,0 +1,83 @@
+.pj-container{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid blue; */
+}
+
+.pj-text{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    /* border: 2px solid red; */
+}
+
+.project-container{
+    display: flex;
+    padding: 1.5rem;
+    /* border: 2px solid red; */
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50vw;
+    height: 60vh;
+    /* border: 2px solid red; */
+}
+
+.pj-img{
+    width: 20vw;
+    height: 30vh;
+    /* border: 2px solid red; */
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+}
+
+.pj-details{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px soild blue; */
+}
+
+.pj-title{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.pj-links{
+    width: 5vw;
+    height: 5vh;
+    /* border: 2px solid red; */
+}
+
+.pj-description{
+    display: flex;
+    align-items: justify;
+    padding: 0.5rem;
+    /* border: 2px solid red; */
+}
+
+.more-about{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.pj-button{
+    /* border: 1.5px solid black; */
+    padding: 0.5rem;
+    background: transparent;
+}
+
+.pj-anchor{
+    text-decoration: none;
+}
