@@ -1,0 +1,19 @@
+.foot-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-text{
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+
+/* Mobile View */
+@media screen and (max-width: 600px) {
+    .foot-text{
+        text-align: center;
+        font-size: x-small;
+    }
+}
