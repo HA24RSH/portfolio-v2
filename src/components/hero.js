@@ -9,7 +9,7 @@ import './hero.css';
 
 export const Hero = () => {
     return (
-        <div className='hero-container'>
+        <div className='hero-container' id='home-section'>
 
             <div className='hero-top'>
 

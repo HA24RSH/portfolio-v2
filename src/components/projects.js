@@ -4,7 +4,7 @@ import projects from "../data/projectData";
 
 const ProjectCard = ({ img, title, description, gitHub }) => {
   return (
-    <div className="project-card">
+    <div className="project-card" id="project-section">
       <img src={img} alt={title} />
       <h3>{title}</h3>
       <p>{description}</p>
