@@ -1,93 +1,113 @@
 .hero-container {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.hero-top {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .hero-logo {
-    display: flex;
-    width: 9vw;
-    height: 17vh;
-    border-radius: 100px;
-    justify-content: center;
-    align-items: center;
+    width: 140px;
+    height: 140px;
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .h-logo {
-    display: flex;
-    border-radius: 50%;
-    border: 2px solid black;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .hero-text {
-    text-align: justify;
-    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-text h3 {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 .inside-text {
-    text-align: justify;
-    font-size: medium;
+    width: fit-content;
 }
 
 .hero-resume {
     display: flex;
-    gap: 0.5rem;
-    padding-bottom: 1rem;
+    gap: 0.8rem;
 }
 
 .hs-button {
-    text-decoration: none;
     background: transparent;
-    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
 .hs-links {
     text-decoration: none;
+    color: black;
 }
 
 .hero-socials {
     display: flex;
-    gap: 1.2rem;
+    gap: 1rem;
 }
 
 .social-links {
-    text-decoration: none;
     color: black;
+    text-decoration: none;
 }
 
 /* Mobile View */
+
 @media screen and (max-width: 600px) {
-    .hero-container {
-        display: flex;
+
+    .hero-top {
         flex-direction: column;
+        align-items: flex-start;
     }
 
     .hero-logo {
-        width: 18vw;
-        height: 10vh;
+        width: 100px;
+        height: 100px;
     }
 
-    .hero-text {
-        font-size: small;
+    .hero-text h2 {
+        font-size: 2rem;
     }
 
-    .inside-text {
-        font-size: x-small;
+    .hero-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .inside-text h3 {
+        font-size: 1rem;
+    }
+
+    .hero-resume {
+        flex-wrap: wrap;
     }
 
     .hs-links {
-        text-decoration: none;
-        font-size: x-small;
-    }
-
-    .hs-button {
-        text-decoration: none;
-        font-size: small;
-        background: transparent;
+        font-size: 0.8rem;
     }
 
     .hero-socials {
-        gap: 0.5rem;
+        gap: 0.7rem;
     }
 }

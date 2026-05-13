@@ -1,122 +1,20 @@
-.pj-container{
+.project-card{
     display: flex;
     flex-direction: column;
-    /* border: 2px solid blue; */
+}
+.project-card img{
+    width: 10vw;
+    height: auto;
+    align-self: center;
 }
 
-.pj-text{
-    display: flex;
-    flex-direction: column;
-    font-size: large;
-    /* border: 2px solid red; */
+.project-card h3{
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    align-self: center;
 }
 
-.text{
-    padding: none;
-}
-
-.project-container{
-    display: flex;
-    padding: 1.5rem;
-    /* border: 2px solid red; */
-}
-
-.projects{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 50vw;
-    height: 60vh;
-    /* border: 2px solid red; */
-}
-
-.pj-img{
-    width: 20vw;
-    height: 30vh;
-    /* border: 2px solid red; */
-}
-
-.img{
-    width: 100%;
-    height: 100%;
-}
-
-.pj-details{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    /* border: 2px solid blue; */
-}
-
-.pj-title{
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    align-items: center;
-    /* border: 2px solid red; */
-}
-
-.pj-links{
-    display: flex;
-    align-items: center;
-    width: 5vw;
-    height: 5vh;
-    /* border: 2px solid red; */
-}
-
-.pj-description{
-    display: flex;
-    align-items: justify;
-    padding: 0.5rem;
-    /* border: 2px solid red; */
-}
-
-.more-about{
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem;
-    align-items: center;
-    /* border: 2px solid red; */
-}
-
-.pj-button{
-    /* border: 1.5px solid black; */
-    padding: 0.5rem;
-    background: transparent;
-}
-
-.pj-anchor{
+.project-card a{
     text-decoration: none;
-}
-
-/* Mobile View */
-@media screen and (max-width: 600px) {
-    
-    .pj-container{
-        width: 70vw;
-        font-size: small;
-    }
-    
-    .projects{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 70vw;
-        height: 70vh;
-    }
-
-    .pj-details{
-        padding: space-evenly;
-    }
-
-    .pj-description{
-        display: flex;
-        text-align: justify;
-    }
-
-    .pj-anchor{
-        font-size: small;
-    }
-
+    align-self: end;
 }

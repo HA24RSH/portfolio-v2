@@ -9,7 +9,7 @@ const ProjectCard = ({ img, title, description, gitHub }) => {
       <h3>{title}</h3>
       <p>{description}</p>
       <a href={gitHub} target="_blank" rel="noopener noreferrer">
-        <GitHubIcon />
+        <GitHubIcon fontSize="large" color="secondary"/>
       </a>
     </div>
   );

@@ -2,24 +2,30 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import XIcon from '@mui/icons-material/X';
-import logo from '../assets/PFP-3-bg-rm.png'
-import './hero.css'
+
+import logo from '../assets/PFP-3-bg-rm.png';
+
+import './hero.css';
 
 export const Hero = () => {
     return (
         <div className='hero-container'>
-            <div className='hero-logo'>
-                <img src={logo} alt='Logo' className='h-logo' />
+
+            <div className='hero-top'>
+
+                <div className='hero-logo'>
+                    <img src={logo} alt='Logo' className='h-logo' />
+                </div>
+
+                <div className='hero-text'>
+                    <h2>Harshvardhan Gadagade</h2>
+                    <h3>Engineer</h3>
+                </div>
+
             </div>
 
-            <div className='hero-text'>
-                <h2>Harshvardhan Gadagade</h2>
-                <h3>Engineer</h3>
-                <div className='inside-text'>
-                    <h3>
-                        Love to build cool stuff.
-                    </h3>
-                </div>
+            <div className='inside-text'>
+                <h3>Love to build cool stuff.</h3>
             </div>
 
             <div className='hero-resume'>
@@ -49,6 +55,7 @@ export const Hero = () => {
                     <EmailIcon fontSize='medium' />
                 </a>
             </div>
+
         </div>
-    )
-}
+    );
+};
