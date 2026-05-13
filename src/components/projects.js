@@ -1,5 +1,4 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
-import EcoCartLogo from "../assets/projects-imgs/Eco-Cart-logo.jpg";
 import "./projects.css";
 import projects from "../data/projectData";
 

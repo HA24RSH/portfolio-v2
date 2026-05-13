@@ -13,15 +13,11 @@ export const Hero = () => {
             </div>
 
             <div className='hero-text'>
-                <h2>Hi, I'm Harsh — A Full Stack Developer who turns caffeine
-                    into code.</h2>
+                <h2>Harshvardhan Gadagade</h2>
+                <h3>Engineer</h3>
                 <div className='inside-text'>
                     <h3>
-                        I craft modern web apps with React,
-                        Next.js, PostgreSQL, and Bun. I believe good UI
-                        isn't optional, bugs are temporary, and
-                        console.log is underrated.Always learning,
-                        always shipping.
+                        Love to build cool stuff.
                     </h3>
                 </div>
             </div>
