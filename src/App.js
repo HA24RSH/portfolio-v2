@@ -1,21 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navbar } from './components/navbar';
-import { Home } from './pages/home';
-import { Footer } from './components/footer';
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
+import { Home } from './pages/Home';
+import { Work } from './pages/Work';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <div className="App-Header">
-        <Router className="App-Router">
-          <Navbar />
+      <Router>
+        <Navbar />
+        <main className="App-body">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/work" element={<Work />} />
           </Routes>
-          <Footer />
-        </Router>
-      </div>
+        </main>
+        <Footer />
+      </Router>
     </div>
   );
 }

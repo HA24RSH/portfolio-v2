@@ -1,114 +1,135 @@
-.hero-container {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+.hero {
+  padding: 3.5rem 0 2.5rem;
+  animation: fadeUp 0.55s ease forwards;
+}
+
+/* ── Top row ───────────────────────── */
+.hero__top {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.hero__avatar-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid var(--border-light);
+  box-shadow: 0 0 0 4px rgba(232,232,232,0.06);
+  transition: box-shadow 300ms ease;
+}
+
+.hero__avatar-wrap:hover {
+  box-shadow: 0 0 0 6px rgba(232,232,232,0.10);
+}
+
+.hero__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hero__name {
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.hero__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+}
+
+.hero__dot {
+  color: var(--text-muted);
+  margin: 0 0.1rem;
+}
+
+.hero__email {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.hero__copy {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: var(--text-muted);
+  transition: color var(--transition), background var(--transition);
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.hero__copy:hover {
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+
+.hero__copy--done {
+  color: var(--green) !important;
+}
+
+/* ── Bio ───────────────────────────── */
+.hero__bio {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  max-width: 480px;
+  line-height: 1.65;
+}
+
+/* ── Socials ───────────────────────── */
+.hero__socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hero__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: color var(--transition), background var(--transition);
+}
+
+.hero__icon:hover {
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+
+/* ── Mobile ────────────────────────── */
+@media (max-width: 600px) {
+  .hero__top {
+    flex-direction: row;
     gap: 1rem;
-    padding-top: 5rem;
-}
+  }
 
-.hero-top {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
+  .hero__avatar-wrap {
+    width: 56px;
+    height: 56px;
+  }
 
-.hero-logo {
-    width: 140px;
-    height: 140px;
-    border: 2px solid black;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
-.h-logo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero-text h2 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.hero-text h3 {
-    margin-top: 0.5rem;
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-.inside-text {
-    width: fit-content;
-}
-
-.hero-resume {
-    display: flex;
-    gap: 0.8rem;
-}
-
-.hs-button {
-    background: transparent;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-
-.hs-links {
-    text-decoration: none;
-    color: black;
-}
-
-.hero-socials {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-links {
-    color: black;
-    text-decoration: none;
-}
-
-/* Mobile View */
-
-@media screen and (max-width: 600px) {
-
-    .hero-top {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .hero-logo {
-        width: 100px;
-        height: 100px;
-    }
-
-    .hero-text h2 {
-        font-size: 2rem;
-    }
-
-    .hero-text h3 {
-        font-size: 1.2rem;
-    }
-
-    .inside-text h3 {
-        font-size: 1rem;
-    }
-
-    .hero-resume {
-        flex-wrap: wrap;
-    }
-
-    .hs-links {
-        font-size: 0.8rem;
-    }
-
-    .hero-socials {
-        gap: 0.7rem;
-    }
+  .hero__name {
+    font-size: 1.2rem;
+  }
 }

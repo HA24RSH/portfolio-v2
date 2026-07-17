@@ -1,29 +1,49 @@
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import '../components/navbar.css';
+import SearchIcon from '@mui/icons-material/Search';
+import './Navbar.css';
 
 export const Navbar = () => {
-    return (
-        <nav className='navbar'>
-            <div className='nv-container'>
+  const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
 
-                    <div className='nv-details'>
-                        <a href='#home-section' className='nv-links'>
-                        Home
-                        </a>
-                        <a href='#work-section' className='nv-links'>
-                            Work
-                        </a>
-                        <a href='#project-section' className='nv-links'>
-                            Projects
-                        </a>
-                    </div>
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-                <div className='nv-content'>
-                    <button className='theme'>
-                        <DarkModeIcon fontSize='small'/>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    )
-}
+  const isActive = (path) => location.pathname === path;
+
+  return (
+    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+      <div className="navbar__inner content-col">
+        <div className="navbar__links">
+          <Link to="/" className={`navbar__link ${isActive('/') ? 'navbar__link--active' : ''}`}>Home</Link>
+          <Link to="/work" className={`navbar__link ${isActive('/work') ? 'navbar__link--active' : ''}`}>Work</Link>
+          <Link to="/blog" className={`navbar__link ${isActive('/blog') ? 'navbar__link--active' : ''}`}>Blog</Link>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar__link"
+          >
+            Resume
+          </a>
+        </div>
+
+        <div className="navbar__actions">
+          <button className="navbar__search" aria-label="Search">
+            <SearchIcon sx={{ fontSize: 16 }} />
+            <span className="navbar__search-text">Search</span>
+            <kbd className="navbar__kbd">⌘ K</kbd>
+          </button>
+          <button className="navbar__theme" aria-label="Toggle theme">
+            <DarkModeIcon sx={{ fontSize: 16 }} />
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
+};

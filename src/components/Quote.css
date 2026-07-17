@@ -1,0 +1,43 @@
+.quote-section {
+  padding: 2rem 0 3rem;
+  animation: fadeUp 0.55s ease 0.25s both;
+}
+
+.quote {
+  position: relative;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.75rem 1.5rem 2.25rem;
+  overflow: hidden;
+}
+
+.quote__mark {
+  position: absolute;
+  top: -0.5rem;
+  left: 0.75rem;
+  font-family: Georgia, serif;
+  font-size: 6rem;
+  color: var(--border-light);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.quote__text {
+  font-family: var(--font-mono);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  position: relative;
+  z-index: 1;
+}
+
+.quote__author {
+  margin-top: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: right;
+}
