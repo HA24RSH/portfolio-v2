@@ -6,5 +6,32 @@
 
 .App-body {
   flex: 1;
-  padding-top: 60px; /* offset for fixed navbar */
+  padding-top: 60px;
+}
+
+/* ── Shared utilities ───────────────── */
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
+.ghost-btn {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 1rem;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+  cursor: pointer;
+}
+
+.ghost-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+  background: var(--bg-elevated);
 }

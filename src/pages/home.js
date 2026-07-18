@@ -1,8 +1,7 @@
-import { Hero } from '../components/Hero';
-import { Experience } from '../components/Experience';
-import { Blog } from '../components/Blog';
-import { Categories } from '../components/Categories';
-import { Quote } from '../components/Quote';
+import { Hero } from '../components/landing/Hero';
+import { Experience } from '../components/landing/Experience';
+import { Blog } from '../components/landing/Blog';
+import { Quote } from '../components/common/Quote';
 import './Home.css';
 
 export const Home = () => {
@@ -11,7 +10,6 @@ export const Home = () => {
       <Hero />
       <Experience />
       <Blog />
-      <Categories />
       <Quote />
     </div>
   );

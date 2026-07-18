@@ -3,6 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import XIcon from '@mui/icons-material/X';
+import siteConfig from '../../config/site';
 import './Footer.css';
 
 const navLinks = [
@@ -11,18 +12,13 @@ const navLinks = [
   { label: 'Blog',     to: '/blog' },
   { label: 'Resume',   to: '/resume' },
   { label: 'Projects', to: '/work' },
-  { label: 'Gears',    to: '#' },
-  { label: 'Setup',    to: '#' },
-  { label: 'Terminal', to: '#' },
-  { label: 'Books',    to: '#' },
-  { label: 'Movies',   to: '#' },
 ];
 
 const socials = [
-  { icon: <XIcon sx={{ fontSize: 17 }} />,        href: 'https://x.com/haarshhqt',                          label: 'X' },
-  { icon: <LinkedInIcon sx={{ fontSize: 17 }} />, href: 'https://www.linkedin.com/in/harshvardhan-gadagade/', label: 'LinkedIn' },
-  { icon: <GitHubIcon sx={{ fontSize: 17 }} />,   href: 'https://github.com/HA24RSH',                        label: 'GitHub' },
-  { icon: <EmailIcon sx={{ fontSize: 17 }} />,    href: 'mailto:harshvardhangadagade24@gmail.com',            label: 'Email' },
+  { icon: <XIcon sx={{ fontSize: 17 }} />,        href: siteConfig.twitter,  label: 'X' },
+  { icon: <LinkedInIcon sx={{ fontSize: 17 }} />, href: siteConfig.linkedin, label: 'LinkedIn' },
+  { icon: <GitHubIcon sx={{ fontSize: 17 }} />,   href: siteConfig.github,   label: 'GitHub' },
+  { icon: <EmailIcon sx={{ fontSize: 17 }} />,    href: `mailto:${siteConfig.email}`, label: 'Email' },
 ];
 
 export const Footer = () => {
@@ -38,28 +34,20 @@ export const Footer = () => {
               ))}
             </div>
           </div>
-
           <div className="footer__col footer__col--right">
             <p className="footer__heading">CONNECT</p>
             <div className="footer__icons">
               {socials.map((s, i) => (
-                <a
-                  key={i}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer__icon"
-                  aria-label={s.label}
-                >
+                <a key={i} href={s.href} target="_blank" rel="noopener noreferrer"
+                  className="footer__icon" aria-label={s.label}>
                   {s.icon}
                 </a>
               ))}
             </div>
           </div>
         </div>
-
         <div className="footer__bottom">
-          <span>© {new Date().getFullYear()} Harshvardhan Gadagade. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</span>
         </div>
       </div>
     </footer>

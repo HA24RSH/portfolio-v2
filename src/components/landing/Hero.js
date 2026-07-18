@@ -1,17 +1,18 @@
+import { useState } from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import XIcon from '@mui/icons-material/X';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import logo from '../assets/PFP-3-bg-rm.png';
+import logo from '../../assets/PFP-3-bg-rm.png';
+import siteConfig from '../../config/site';
 import './Hero.css';
-import { useState } from 'react';
 
 export const Hero = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('harshvardhangadagade24@gmail.com');
+    navigator.clipboard.writeText(siteConfig.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 1800);
   };
@@ -20,16 +21,16 @@ export const Hero = () => {
     <section className="hero" id="home-section">
       <div className="hero__top">
         <div className="hero__avatar-wrap">
-          <img src={logo} alt="Harshvardhan Gadagade" className="hero__avatar" />
+          <img src={logo} alt={siteConfig.name} className="hero__avatar" />
         </div>
         <div className="hero__identity">
-          <h1 className="hero__name">Harshvardhan Gadagade</h1>
+          <h1 className="hero__name">{siteConfig.name}</h1>
           <p className="hero__meta">
             <span>Engineer</span>
             <span className="hero__dot">·</span>
             <span>Builder</span>
             <span className="hero__dot">·</span>
-            <span className="hero__email">harshvardhangadagade24@gmail.com</span>
+            <span className="hero__email">{siteConfig.email}</span>
             <button
               className={`hero__copy ${copied ? 'hero__copy--done' : ''}`}
               onClick={handleCopyEmail}
@@ -42,21 +43,19 @@ export const Hero = () => {
         </div>
       </div>
 
-      <p className="hero__bio">
-        Love to build cool stuff — full-stack engineer & tinkerer obsessed with clean code and great UX.
-      </p>
+      <p className="hero__bio">{siteConfig.bio}</p>
 
       <div className="hero__socials">
-        <a href="https://x.com/haarshhqt" target="_blank" rel="noopener noreferrer" className="hero__icon" aria-label="X / Twitter">
+        <a href={siteConfig.twitter}  target="_blank" rel="noopener noreferrer" className="hero__icon" aria-label="X / Twitter">
           <XIcon sx={{ fontSize: 18 }} />
         </a>
-        <a href="https://github.com/HA24RSH" target="_blank" rel="noopener noreferrer" className="hero__icon" aria-label="GitHub">
+        <a href={siteConfig.github}   target="_blank" rel="noopener noreferrer" className="hero__icon" aria-label="GitHub">
           <GitHubIcon sx={{ fontSize: 18 }} />
         </a>
-        <a href="https://www.linkedin.com/in/harshvardhan-gadagade/" target="_blank" rel="noopener noreferrer" className="hero__icon" aria-label="LinkedIn">
+        <a href={siteConfig.linkedin} target="_blank" rel="noopener noreferrer" className="hero__icon" aria-label="LinkedIn">
           <LinkedInIcon sx={{ fontSize: 18 }} />
         </a>
-        <a href="mailto:harshvardhangadagade24@gmail.com" className="hero__icon" aria-label="Email">
+        <a href={`mailto:${siteConfig.email}`} className="hero__icon" aria-label="Email">
           <EmailIcon sx={{ fontSize: 18 }} />
         </a>
       </div>
